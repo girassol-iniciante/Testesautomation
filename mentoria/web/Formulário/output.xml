@@ -1,170 +1,304 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220430 12:14:35.991" rpa="false" schemaversion="2">
-<suite id="s1" name="FormulárioTests" source="C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioTests.Robot">
-<test id="s1-t1" name="Cenário: Iniciar os testes no Formulário">
-<kw name="Dado que quero acessar a página home do site de teste" library="FormulárioSteps">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220503 21:55:19.144" rpa="false" schemaversion="2">
+<suite id="s1" name="FormulárioTests" source="C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioTests.robot">
+<test id="s1-t1" name="Cenário 1: Iniciar os testes no Formulário e editar Formulário">
+<kw name="Dado que quero acessar a página home do site de teste" library="commons" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220430 12:14:37.146" level="INFO">Opening browser 'chrome' to base url 'https://automacaocombatista.herokuapp.com/treinamento/home'.</msg>
-<status status="PASS" starttime="20220430 12:14:37.145" endtime="20220430 12:14:43.690"/>
+<msg timestamp="20220503 21:55:20.656" level="INFO">Opening browser 'chrome' to base url 'https://automacaocombatista.herokuapp.com/treinamento/home'.</msg>
+<status status="PASS" starttime="20220503 21:55:20.654" endtime="20220503 21:55:28.512"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:37.145" endtime="20220430 12:14:43.691"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220503 21:55:28.513" endtime="20220503 21:55:28.642"/>
 </kw>
-<kw name="E clico em Formulário" library="FormulárioSteps">
+<status status="PASS" starttime="20220503 21:55:20.653" endtime="20220503 21:55:28.642"/>
+</kw>
+<kw name="E clico no link Formulário" library="commons">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${LINK_FORMULARIO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:43.693" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[1]/a'.</msg>
-<status status="PASS" starttime="20220430 12:14:43.692" endtime="20220430 12:14:43.783"/>
+<msg timestamp="20220503 21:55:28.647" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20220503 21:55:28.645" endtime="20220503 21:55:28.729"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:43.691" endtime="20220430 12:14:43.784"/>
+<status status="PASS" starttime="20220503 21:55:28.643" endtime="20220503 21:55:28.729"/>
 </kw>
-<kw name="E Criar Usuários" library="FormulárioSteps">
+<kw name="E clico no link Criar Usuários" library="commons">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${LINK_CRIAR_USUARIO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220430 12:14:43.785" endtime="20220430 12:14:43.885"/>
+<status status="PASS" starttime="20220503 21:55:28.731" endtime="20220503 21:55:28.788"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${LINK_CRIAR_USUARIO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:43.886" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[1]/div/ul/li[1]/a'.</msg>
-<status status="PASS" starttime="20220430 12:14:43.885" endtime="20220430 12:14:44.490"/>
+<msg timestamp="20220503 21:55:28.789" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[1]/div/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20220503 21:55:28.788" endtime="20220503 21:55:29.450"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:43.785" endtime="20220430 12:14:44.490"/>
+<status status="PASS" starttime="20220503 21:55:28.730" endtime="20220503 21:55:29.450"/>
 </kw>
 <kw name="Quando preencho os dados do Formulário" library="FormulárioSteps">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_NOME}</arg>
 <arg>Leticia</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:44.492" level="INFO">Typing text 'Leticia' into text field 'css=input#user_name'.</msg>
-<status status="PASS" starttime="20220430 12:14:44.492" endtime="20220430 12:14:44.660"/>
+<msg timestamp="20220503 21:55:29.452" level="INFO">Typing text 'Leticia' into text field 'css=input#user_name'.</msg>
+<status status="PASS" starttime="20220503 21:55:29.452" endtime="20220503 21:55:29.652"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_ULTIMO-NOME}</arg>
 <arg>Ferreira</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:44.661" level="INFO">Typing text 'Ferreira' into text field 'css=input#user_lastname'.</msg>
-<status status="PASS" starttime="20220430 12:14:44.660" endtime="20220430 12:14:44.795"/>
+<msg timestamp="20220503 21:55:29.653" level="INFO">Typing text 'Ferreira' into text field 'css=input#user_lastname'.</msg>
+<status status="PASS" starttime="20220503 21:55:29.652" endtime="20220503 21:55:29.840"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_EMAIL}</arg>
 <arg>Leticia22@teste.com.br</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:44.796" level="INFO">Typing text 'Leticia22@teste.com.br' into text field 'css=input#user_email'.</msg>
-<status status="PASS" starttime="20220430 12:14:44.795" endtime="20220430 12:14:44.986"/>
+<msg timestamp="20220503 21:55:29.843" level="INFO">Typing text 'Leticia22@teste.com.br' into text field 'css=input#user_email'.</msg>
+<status status="PASS" starttime="20220503 21:55:29.841" endtime="20220503 21:55:30.029"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_ENDEREÇO}</arg>
 <arg>Rua Brasil</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:44.987" level="INFO">Typing text 'Rua Brasil' into text field 'css=input#user_address'.</msg>
-<status status="PASS" starttime="20220430 12:14:44.987" endtime="20220430 12:14:45.125"/>
+<msg timestamp="20220503 21:55:30.030" level="INFO">Typing text 'Rua Brasil' into text field 'css=input#user_address'.</msg>
+<status status="PASS" starttime="20220503 21:55:30.030" endtime="20220503 21:55:30.196"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_UNIVERSIDADE}</arg>
 <arg>Anhembi Morumbi</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:45.126" level="INFO">Typing text 'Anhembi Morumbi' into text field 'css=input#user_university'.</msg>
-<status status="PASS" starttime="20220430 12:14:45.126" endtime="20220430 12:14:45.277"/>
+<msg timestamp="20220503 21:55:30.197" level="INFO">Typing text 'Anhembi Morumbi' into text field 'css=input#user_university'.</msg>
+<status status="PASS" starttime="20220503 21:55:30.196" endtime="20220503 21:55:30.399"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_PROFISSAO}</arg>
 <arg>Analista Administrativo</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:45.277" level="INFO">Typing text 'Analista Administrativo' into text field 'css=input#user_profile'.</msg>
-<status status="PASS" starttime="20220430 12:14:45.277" endtime="20220430 12:14:45.444"/>
+<msg timestamp="20220503 21:55:30.399" level="INFO">Typing text 'Analista Administrativo' into text field 'css=input#user_profile'.</msg>
+<status status="PASS" starttime="20220503 21:55:30.399" endtime="20220503 21:55:30.621"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_GENERO}</arg>
 <arg>Feminino</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:45.445" level="INFO">Typing text 'Feminino' into text field 'css=input#user_gender'.</msg>
-<status status="PASS" starttime="20220430 12:14:45.444" endtime="20220430 12:14:45.577"/>
+<msg timestamp="20220503 21:55:30.622" level="INFO">Typing text 'Feminino' into text field 'css=input#user_gender'.</msg>
+<status status="PASS" starttime="20220503 21:55:30.621" endtime="20220503 21:55:30.794"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_IDADE}</arg>
 <arg>31</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:45.577" level="INFO">Typing text '31' into text field 'css=input#user_age'.</msg>
-<status status="PASS" starttime="20220430 12:14:45.577" endtime="20220430 12:14:45.712"/>
+<msg timestamp="20220503 21:55:30.795" level="INFO">Typing text '31' into text field 'css=input#user_age'.</msg>
+<status status="PASS" starttime="20220503 21:55:30.794" endtime="20220503 21:55:30.936"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:44.491" endtime="20220430 12:14:45.712"/>
+<status status="PASS" starttime="20220503 21:55:29.451" endtime="20220503 21:55:30.936"/>
 </kw>
-<kw name="Então Crio o cadastro com sucesso" library="FormulárioSteps">
+<kw name="E Crio o cadastro" library="commons">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BTN_CRIAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:45.715" level="INFO">Clicking element 'name=commit'.</msg>
-<status status="PASS" starttime="20220430 12:14:45.714" endtime="20220430 12:14:46.642"/>
+<msg timestamp="20220503 21:55:30.938" level="INFO">Clicking element 'name=commit'.</msg>
+<status status="PASS" starttime="20220503 21:55:30.938" endtime="20220503 21:55:31.852"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:45.713" endtime="20220430 12:14:46.644"/>
+<status status="PASS" starttime="20220503 21:55:30.937" endtime="20220503 21:55:31.852"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:37.143" endtime="20220430 12:14:46.648"/>
-</test>
-<test id="s1-t2" name="Cenário: Editar Formulário">
-<kw name="Dado que quero editar o formulário" library="FormulárioSteps">
+<kw name="E edito formulário" library="commons">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BTN_EDITAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:46.654" level="INFO">Clicking element 'css=a.btn.waves-light.blue'.</msg>
-<status status="PASS" starttime="20220430 12:14:46.654" endtime="20220430 12:14:46.741"/>
+<msg timestamp="20220503 21:55:31.855" level="INFO">Clicking element 'css=a.btn.waves-light.blue'.</msg>
+<status status="PASS" starttime="20220503 21:55:31.854" endtime="20220503 21:55:31.951"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:46.653" endtime="20220430 12:14:46.742"/>
+<status status="PASS" starttime="20220503 21:55:31.853" endtime="20220503 21:55:31.952"/>
 </kw>
 <kw name="E altero Endereço" library="FormulárioSteps">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${INPUT_ENDEREÇO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220430 12:14:46.744" endtime="20220430 12:14:46.986"/>
+<status status="PASS" starttime="20220503 21:55:31.955" endtime="20220503 21:55:32.214"/>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>${INPUT_ENDEREÇO}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220430 12:14:46.986" endtime="20220430 12:14:47.043"/>
+<status status="PASS" starttime="20220503 21:55:32.215" endtime="20220503 21:55:32.304"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${INPUT_ENDEREÇO}</arg>
 <arg>Avenida Brasil</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:47.044" level="INFO">Typing text 'Avenida Brasil' into text field 'css=input#user_address'.</msg>
-<status status="PASS" starttime="20220430 12:14:47.043" endtime="20220430 12:14:47.178"/>
+<msg timestamp="20220503 21:55:32.305" level="INFO">Typing text 'Avenida Brasil' into text field 'css=input#user_address'.</msg>
+<status status="PASS" starttime="20220503 21:55:32.304" endtime="20220503 21:55:32.481"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:46.742" endtime="20220430 12:14:47.178"/>
+<status status="PASS" starttime="20220503 21:55:31.954" endtime="20220503 21:55:32.481"/>
 </kw>
-<kw name="Então Crio o cadastro com sucesso" library="FormulárioSteps">
+<kw name="Então Crio o cadastro com sucesso" library="commons">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BTN_CRIAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220430 12:14:47.180" level="INFO">Clicking element 'name=commit'.</msg>
-<status status="PASS" starttime="20220430 12:14:47.180" endtime="20220430 12:14:47.720"/>
+<msg timestamp="20220503 21:55:32.483" level="INFO">Clicking element 'name=commit'.</msg>
+<status status="PASS" starttime="20220503 21:55:32.483" endtime="20220503 21:55:33.082"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:47.179" endtime="20220430 12:14:47.720"/>
+<status status="PASS" starttime="20220503 21:55:32.482" endtime="20220503 21:55:33.083"/>
 </kw>
-<status status="PASS" starttime="20220430 12:14:46.652" endtime="20220430 12:14:47.721"/>
+<kw name="Fecho a pagina" library="commons" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220503 21:55:33.087" endtime="20220503 21:55:35.562"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:33.086" endtime="20220503 21:55:35.563"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:20.630" endtime="20220503 21:55:35.565"/>
+</test>
+<test id="s1-t2" name="Cenário 2: Excluir uma Lista de Usuários">
+<kw name="Dado que quero acessar a página home do site de teste" library="commons" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220503 21:55:35.583" level="INFO">Opening browser 'chrome' to base url 'https://automacaocombatista.herokuapp.com/treinamento/home'.</msg>
+<status status="PASS" starttime="20220503 21:55:35.579" endtime="20220503 21:55:44.311"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220503 21:55:44.312" endtime="20220503 21:55:44.444"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:35.574" endtime="20220503 21:55:44.445"/>
+</kw>
+<kw name="E clico no link Formulário" library="commons">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220503 21:55:44.449" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20220503 21:55:44.448" endtime="20220503 21:55:44.562"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:44.447" endtime="20220503 21:55:44.563"/>
+</kw>
+<kw name="E clico no link de Usuários" library="commons">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LINK_LISTA_DE_USUARIOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220503 21:55:44.569" endtime="20220503 21:55:44.749"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_LISTA_DE_USUARIOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220503 21:55:44.750" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[1]/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20220503 21:55:44.749" endtime="20220503 21:55:45.704"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:44.568" endtime="20220503 21:55:45.704"/>
+</kw>
+<kw name="Então Excluo o primeiro usuário com sucesso" library="FormulárioSteps">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[3]/div/table/tbody/tr[1]/td[11]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220503 21:55:45.708" level="INFO">Clicking element 'xpath=/html/body/div[3]/div/table/tbody/tr[1]/td[11]/a'.</msg>
+<status status="PASS" starttime="20220503 21:55:45.707" endtime="20220503 21:55:45.777"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220503 21:55:45.778" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220503 21:55:45.778" endtime="20220503 21:55:45.784"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Seu Usuário foi removido com sucesso!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220503 21:55:45.784" endtime="20220503 21:55:46.364"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:45.706" endtime="20220503 21:55:46.364"/>
+</kw>
+<kw name="Fecho a pagina" library="commons" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220503 21:55:46.366" endtime="20220503 21:55:48.822"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:46.365" endtime="20220503 21:55:48.823"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:35.571" endtime="20220503 21:55:48.824"/>
+</test>
+<test id="s1-t3" name="Cenário 3:">
+<kw name="Dado que quero acessar a página home do site de teste" library="commons" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220503 21:55:48.841" level="INFO">Opening browser 'chrome' to base url 'https://automacaocombatista.herokuapp.com/treinamento/home'.</msg>
+<status status="PASS" starttime="20220503 21:55:48.834" endtime="20220503 21:56:03.940"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220503 21:56:03.940" endtime="20220503 21:56:04.101"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:48.832" endtime="20220503 21:56:04.101"/>
+</kw>
+<kw name="E clico no link Busca de elementos" library="commons">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_BUSCA_DE_ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220503 21:56:04.105" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20220503 21:56:04.104" endtime="20220503 21:56:04.196"/>
+</kw>
+<status status="PASS" starttime="20220503 21:56:04.103" endtime="20220503 21:56:04.197"/>
+</kw>
+<kw name="E clico no link" library="commons">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220503 21:56:04.200" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[1]/ul/li[2]/div/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20220503 21:56:04.199" endtime="20220503 21:56:04.979"/>
+</kw>
+<status status="PASS" starttime="20220503 21:56:04.198" endtime="20220503 21:56:04.979"/>
+</kw>
+<kw name="Quando Escolho o link Erro 400 - Bad Request" library="FormulárioSteps">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/div[2]/div[4]/div[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220503 21:56:04.981" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[2]/div[4]/div[1]/a'.</msg>
+<status status="PASS" starttime="20220503 21:56:04.980" endtime="20220503 21:56:05.456"/>
+</kw>
+<status status="PASS" starttime="20220503 21:56:04.980" endtime="20220503 21:56:05.456"/>
+</kw>
+<kw name="Então Verifico o que aperece no link com sucesso" library="FormulárioSteps">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=a.btn.waves-light.red</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220503 21:56:05.463" level="INFO">Clicking element 'css=a.btn.waves-light.red'.</msg>
+<status status="PASS" starttime="20220503 21:56:05.463" endtime="20220503 21:56:05.821"/>
+</kw>
+<status status="PASS" starttime="20220503 21:56:05.461" endtime="20220503 21:56:05.821"/>
+</kw>
+<kw name="Fecho a pagina" library="commons" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220503 21:56:05.825" endtime="20220503 21:56:08.198"/>
+</kw>
+<status status="PASS" starttime="20220503 21:56:05.823" endtime="20220503 21:56:08.199"/>
+</kw>
+<status status="PASS" starttime="20220503 21:55:48.829" endtime="20220503 21:56:08.200"/>
 </test>
 <doc>Suíte Exemplo mentoria</doc>
-<status status="PASS" starttime="20220430 12:14:35.995" endtime="20220430 12:14:47.724"/>
+<status status="PASS" starttime="20220503 21:55:19.147" endtime="20220503 21:56:08.208"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="FormulárioTests">FormulárioTests</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="FormulárioTests">FormulárioTests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220430 12:14:37.130" level="WARN">Imported resource file 'C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioElements.robot' is empty.</msg>
-<msg timestamp="20220430 12:14:37.134" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioTests.robot' on line 6: Setting 'Suite Setup' is not allowed in resource file.</msg>
-<msg timestamp="20220430 12:14:37.135" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioTests.robot' on line 7: Setting 'Test Setup' is not allowed in resource file.</msg>
-<msg timestamp="20220430 12:14:37.136" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioTests.robot' on line 8: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg timestamp="20220430 12:14:37.137" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioTests.robot' on line 9: Setting 'Suite Teardown' is not allowed in resource file.</msg>
-<msg timestamp="20220430 12:14:37.138" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioSteps.robot' on line 3: Error in file 'C:\Users\Leticia\Desktop\Automação\mentoria\web\Formulário\FormulárioTests.robot' on line 12: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220503 21:55:20.534" level="WARN">Imported resource file 'C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioElements.robot' is empty.</msg>
+<msg timestamp="20220503 21:55:20.569" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioTests.robot' on line 6: Setting 'Suite Setup' is not allowed in resource file.</msg>
+<msg timestamp="20220503 21:55:20.573" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioTests.robot' on line 7: Setting 'Suite Teardown' is not allowed in resource file.</msg>
+<msg timestamp="20220503 21:55:20.576" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioTests.robot' on line 8: Setting 'Test Setup' is not allowed in resource file.</msg>
+<msg timestamp="20220503 21:55:20.586" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioTests.robot' on line 9: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg timestamp="20220503 21:55:20.594" level="ERROR">Error in file 'C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioSteps.robot' on line 3: Error in file 'C:\Users\Leticia\Desktop\Automação\Testesautomation\mentoria\web\formulário\FormulárioTests.robot' on line 13: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
